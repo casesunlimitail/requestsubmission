@@ -11,7 +11,7 @@
         --teal:#1F8FA8;--radius:12px;}
   *{box-sizing:border-box;margin:0;padding:0;}
   body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;padding:0 0 92px;}
-
+ 
   .header{background:var(--ink);padding:30px 40px 26px;position:sticky;top:0;z-index:10;}
   .header-inner{max-width:780px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;}
   .logo{display:flex;align-items:center;gap:10px;color:#fff;}
@@ -23,7 +23,7 @@
   .step-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.25);transition:all .3s;}
   .step-dot.active{background:var(--accent2);transform:scale(1.3);}
   .step-dot.done{background:var(--success);}
-
+ 
   .hero{background:var(--ink);padding:0 40px 38px;}
   .hero-inner{max-width:780px;margin:0 auto;}
   .hero h1{font-weight:800;letter-spacing:-1px;font-size:40px;color:#fff;line-height:1.08;margin-bottom:12px;}
@@ -32,7 +32,7 @@
   .hero p b{color:rgba(255,255,255,.92);font-weight:600;}
   .progress-track{background:rgba(255,255,255,.1);height:3px;margin-top:26px;border-radius:2px;}
   .progress-fill{height:100%;background:var(--accent2);border-radius:2px;transition:width .4s ease;}
-
+ 
   .body{max-width:780px;margin:0 auto;padding:0 40px;}
   .section{margin-top:34px;}
   .section-label{font-size:11px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);
@@ -42,7 +42,7 @@
   label{display:block;font-size:13px;font-weight:500;color:var(--ink2);margin-bottom:6px;}
   label .req{color:var(--danger);margin-left:3px;}
   label .hint{font-weight:300;color:var(--muted);font-size:12px;margin-left:6px;}
-
+ 
   input[type=text],input[type=date],select,textarea{width:100%;padding:11px 14px;border:1.5px solid var(--border);
     border-radius:var(--radius);font-family:'DM Sans',sans-serif;font-size:14px;color:var(--ink);background:var(--card);
     outline:none;transition:border-color .2s,box-shadow .2s;-webkit-appearance:none;}
@@ -51,13 +51,14 @@
   select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237b7c99' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
     background-repeat:no-repeat;background-position:right 14px center;padding-right:36px;cursor:pointer;}
   .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-
+ 
   .chip-group{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px;}
   .chip{padding:8px 15px;border:1.5px solid var(--border);border-radius:100px;font-size:13px;color:var(--ink2);
     cursor:pointer;transition:all .18s;user-select:none;background:var(--card);}
   .chip:hover{border-color:var(--accent);color:var(--accent);}
   .chip.selected{background:var(--accent);border-color:var(--accent);color:#fff;}
-
+  .other-input{margin-top:10px;}
+ 
   .prio-group{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
   .prio-card{border:1.5px solid var(--border);border-radius:var(--radius);padding:14px;cursor:pointer;
     transition:all .18s;text-align:center;background:var(--card);}
@@ -69,20 +70,9 @@
   .prio-card[data-gate=ok].selected{border-color:var(--success);background:rgba(5,150,105,.05);}
   .prio-card[data-gate=wip].selected{border-color:var(--warn);background:rgba(217,119,6,.05);}
   .prio-card[data-gate=no].selected{border-color:var(--danger);background:rgba(220,38,38,.05);}
-
-  .dl-list{display:flex;flex-direction:column;gap:8px;}
-  .dl-item{display:flex;align-items:center;gap:10px;padding:10px 14px;border:1.5px solid var(--border);
-    border-radius:var(--radius);cursor:pointer;transition:all .18s;background:var(--card);}
-  .dl-item:hover{border-color:var(--accent2);}
-  .dl-item.selected{border-color:var(--accent);background:rgba(0,62,255,.04);}
-  .dl-item .cb{width:18px;height:18px;border:1.5px solid var(--border);border-radius:4px;display:flex;
-    align-items:center;justify-content:center;flex-shrink:0;transition:all .18s;}
-  .dl-item.selected .cb{background:var(--accent);border-color:var(--accent);}
-  .dl-item.selected .cb::after{content:'✓';color:#fff;font-size:11px;font-weight:700;}
-  .dl-name{font-size:13px;font-weight:500;}
-  .dl-hint{font-size:11px;color:var(--muted);}
+ 
   .char-count{font-size:11px;color:var(--muted);text-align:right;margin-top:4px;}
-
+ 
   /* ─── SCORE ─── */
   .tier-ref{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:20px;}
   .tref{border:1.5px solid var(--border);border-radius:10px;padding:12px 13px;background:var(--card);transition:all .2s;}
@@ -91,7 +81,7 @@
   .tref small{display:block;font-size:11.5px;color:var(--muted);margin-top:2px;}
   .tref.on{border-color:var(--accent);background:rgba(0,62,255,.055);}
   .tref.on b{color:var(--accent);}
-
+ 
   .score-item{border:1.5px solid var(--border);border-radius:var(--radius);padding:16px;background:var(--card);
     margin-bottom:12px;transition:border-color .18s;}
   .score-item.answered{border-color:rgba(0,62,255,.35);}
@@ -107,7 +97,7 @@
   .anc b{display:block;font-weight:700;color:var(--ink2);margin-bottom:2px;font-size:10.5px;letter-spacing:.4px;}
   .anc.hit{background:rgba(0,62,255,.07);color:var(--ink2);}
   .anc.hit b{color:var(--accent);}
-
+ 
   .tier-live{position:sticky;bottom:80px;margin-top:20px;border-radius:var(--radius);padding:16px 18px;
     background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:14px;
     box-shadow:0 8px 28px rgba(0,31,88,.18);}
@@ -118,15 +108,15 @@
   .tier-badge.a{background:var(--accent);}
   .tier-badge.b{background:var(--teal);}
   .tier-note{font-size:11.5px;color:rgba(255,255,255,.55);margin-top:3px;font-weight:300;}
-
+ 
   .callout{border-radius:var(--radius);padding:14px 16px;font-size:12.5px;line-height:1.6;margin-bottom:18px;}
   .callout.info{background:rgba(0,62,255,.05);border:1.5px solid rgba(0,62,255,.18);color:var(--ink2);}
   .callout.warn{background:rgba(217,119,6,.06);border:1.5px solid rgba(217,119,6,.25);color:#7c4a03;}
-
+ 
   .field.error input,.field.error select,.field.error textarea{border-color:var(--danger);box-shadow:0 0 0 3px rgba(220,38,38,.08);}
   .field.error label{color:var(--danger);}
-  .field.error .chip,.field.error .prio-card,.field.error .dl-item{border-color:rgba(220,38,38,.5);}
-
+  .field.error .chip,.field.error .prio-card{border-color:rgba(220,38,38,.5);}
+ 
   .footer-bar{position:fixed;bottom:0;left:0;right:0;background:var(--card);border-top:1px solid var(--border);
     padding:15px 40px;z-index:20;}
   .footer-inner{max-width:780px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:12px;}
@@ -138,7 +128,7 @@
   .btn-primary:hover{background:#0030cc;}
   .btn-success{background:var(--success);color:#fff;}
   .step-info{font-size:12px;color:var(--muted);}
-
+ 
   #success{display:none;max-width:780px;margin:60px auto;padding:0 40px;text-align:center;}
   #success.show{display:block;}
   #success .ico{font-size:54px;margin-bottom:14px;}
@@ -146,7 +136,7 @@
   #success p{color:var(--muted);font-size:15px;line-height:1.75;}
   .summary-box{background:var(--bg);border-radius:var(--radius);padding:18px;border:1px solid var(--border);
     font-size:13px;line-height:2;}
-
+ 
   @media(max-width:640px){
     .row2,.prio-group,.score-anchors,.tier-ref{grid-template-columns:1fr;}
     body{padding-bottom:104px;}
@@ -158,7 +148,7 @@
 </style>
 </head>
 <body>
-
+ 
 <div class="header">
   <div class="header-inner">
     <div class="logo">
@@ -171,15 +161,15 @@
     </div>
   </div>
 </div>
-
+ 
 <div class="hero"><div class="hero-inner">
   <h1 id="hero-title"></h1>
   <p id="hero-sub"></p>
   <div class="progress-track"><div class="progress-fill" id="progress" style="width:0%"></div></div>
 </div></div>
-
+ 
 <div id="form-wrapper"><div class="body">
-
+ 
   <!-- STEP 1 -->
   <div id="step-1">
     <div class="section">
@@ -196,16 +186,26 @@
         <div class="field"><label>Agency contact involved<span class="hint">Optional</span></label>
           <input type="text" id="agencia" placeholder="Name and agency" oninput="up()"></div>
       </div>
+      <div class="field"><label>Case region <span class="req">*</span></label>
+        <div class="chip-group" id="regiao-group">
+          <div class="chip" data-val="Brazil" onclick="sr(this)">Brazil</div>
+          <div class="chip" data-val="France" onclick="sr(this)">France</div>
+          <div class="chip" data-val="Spain" onclick="sr(this)">Spain</div>
+          <div class="chip" data-val="Other" onclick="sr(this)">Other</div>
+        </div>
+        <input type="text" class="other-input" id="regiao-outra" placeholder="Add the region" oninput="up()" style="display:none">
+      </div>
     </div>
     <div class="section">
       <div class="section-label">Banners</div>
-      <div class="field">
+      <div class="field" id="bandeira-field">
         <label>Where the campaign ran <span class="req">*</span><span class="hint">You can select more than one</span></label>
         <div class="chip-group" id="bandeira-group">
           <div class="chip" data-val="Carrefour" onclick="tc(this)">Carrefour</div>
           <div class="chip" data-val="Atacadão" onclick="tc(this)">Atacadão</div>
           <div class="chip" data-val="Sam's Club" onclick="tc(this)">Sam's Club</div>
         </div>
+        <input type="text" class="other-input" id="varejista-outro" placeholder="Add the retailer's name" oninput="up()">
       </div>
     </div>
     <div class="section">
@@ -224,7 +224,7 @@
       </div>
     </div>
   </div>
-
+ 
   <!-- STEP 2 -->
   <div id="step-2" style="display:none">
     <div class="section">
@@ -241,42 +241,32 @@
       </div>
     </div>
     <div class="section">
-      <div class="section-label">In-store touchpoints</div>
-      <div class="field"><label>Select all that ran <span class="req">*</span></label>
-        <div class="chip-group" id="contato-group">
-          <div class="chip" data-val="Entrance portal" onclick="tc(this)">Entrance portal</div>
-          <div class="chip" data-val="Impact screen" onclick="tc(this)">Impact screen</div>
-          <div class="chip" data-val="Overhead screen" onclick="tc(this)">Overhead screen</div>
-          <div class="chip" data-val="Floor graphic" onclick="tc(this)">Floor graphic</div>
-          <div class="chip" data-val="Banner" onclick="tc(this)">Banner</div>
-          <div class="chip" data-val="Antenna" onclick="tc(this)">Antenna</div>
-          <div class="chip" data-val="Railing" onclick="tc(this)">Railing</div>
-          <div class="chip" data-val="Shopping cart" onclick="tc(this)">Shopping cart</div>
-          <div class="chip" data-val="Monitor side panel" onclick="tc(this)">Monitor side panel</div>
-          <div class="chip" data-val="Escalator" onclick="tc(this)">Escalator</div>
-          <div class="chip" data-val="Check out" onclick="tc(this)">Check out</div>
-        </div>
-      </div>
+      <div class="section-label">Channels</div>
       <div class="field"><label>Environments covered <span class="req">*</span><span class="hint">This defines the omnichannel criterion</span></label>
         <div class="chip-group" id="ambiente-group">
-          <div class="chip" data-val="Physical store" onclick="tc(this)">Physical store</div>
+          <div class="chip" data-val="In-Store" onclick="tc(this)">In-Store</div>
           <div class="chip" data-val="Onsite" onclick="tc(this)">Onsite</div>
           <div class="chip" data-val="Offsite" onclick="tc(this)">Offsite</div>
           <div class="chip" data-val="Creator Checkout" onclick="tc(this)">Creator Checkout</div>
         </div>
       </div>
+      <div class="field">
+        <label>How did you approach the campaign across each channel? <span class="req">*</span><span class="hint">Describe in detail</span></label>
+        <textarea id="canais" style="min-height:130px" placeholder="E.g. In-Store: ... · Onsite: ... · Offsite: ..." oninput="cc(this,'c3',1000);up()"></textarea>
+        <div class="char-count" id="c3">0 / 1000</div>
+      </div>
     </div>
   </div>
-
+ 
   <!-- STEP 3 -->
   <div id="step-3" style="display:none">
     <div class="section">
       <div class="section-label">Insights report</div>
-      <div class="callout info">The case does not go into production before the insights report is ready. If you have not requested it yet, reach out to the Data team.</div>
-      <div class="field"><label>Has the report already been requested from the insights team? <span class="req">*</span></label>
+      <div class="callout info">The case does not go into production before the insights report is ready. If you do not have it yet, reach out to the Data team.</div>
+      <div class="field"><label>Do you already have access to the insights report? <span class="req">*</span></label>
         <div class="prio-group" style="grid-template-columns:1fr 1fr" id="report-group">
-          <div class="prio-card" data-val="Yes" data-gate="ok" onclick="so(this)"><div class="picon">🟢</div><div class="pname">Yes</div><div class="pdesc">Already requested</div></div>
-          <div class="prio-card" data-val="No" data-gate="wip" onclick="so(this)"><div class="picon">🟡</div><div class="pname">No</div><div class="pdesc">Will request it</div></div>
+          <div class="prio-card" data-val="Yes" data-gate="ok" onclick="so(this)"><div class="picon">🟢</div><div class="pname">Yes</div><div class="pdesc">I have the report</div></div>
+          <div class="prio-card" data-val="No" data-gate="wip" onclick="so(this)"><div class="picon">🟡</div><div class="pname">No</div><div class="pdesc">Not yet</div></div>
         </div>
       </div>
     </div>
@@ -289,16 +279,16 @@
           <div class="prio-card" data-val="No" data-gate="no" onclick="so(this)"><div class="picon">🔴</div><div class="pname">No</div><div class="pdesc">Results stay anonymous</div></div>
         </div>
       </div>
-      <div class="field"><label>Legal clearance for external assets <span class="req">*</span></label>
+      <div class="field"><label>Will legal clearance be required for external assets? <span class="req">*</span></label>
         <div class="prio-group" id="juridico-group">
-          <div class="prio-card" data-val="Yes" data-gate="ok" onclick="so(this)"><div class="picon">🟢</div><div class="pname">Cleared</div><div class="pdesc">Can be produced</div></div>
-          <div class="prio-card" data-val="In progress" data-gate="wip" onclick="so(this)"><div class="picon">🟡</div><div class="pname">In progress</div><div class="pdesc">Under review</div></div>
-          <div class="prio-card" data-val="No" data-gate="no" onclick="so(this)"><div class="picon">🔴</div><div class="pname">No</div><div class="pdesc">Nothing goes external</div></div>
+          <div class="prio-card" data-val="Yes" data-gate="wip" onclick="so(this)"><div class="picon">🟡</div><div class="pname">Yes</div><div class="pdesc">Legal review needed</div></div>
+          <div class="prio-card" data-val="No" data-gate="ok" onclick="so(this)"><div class="picon">🟢</div><div class="pname">No</div><div class="pdesc">No clearance needed</div></div>
+          <div class="prio-card" data-val="Not sure" data-gate="wip" onclick="so(this)"><div class="picon">⚪</div><div class="pname">Not sure</div><div class="pdesc">Legal will confirm</div></div>
         </div>
       </div>
     </div>
   </div>
-
+ 
   <!-- STEP 4 · SCORE -->
   <div id="step-4" style="display:none">
     <div class="callout info">Six criteria, scored 1 to 5, for a maximum of 30 points. <b>If torn between two values, choose the lower one.</b></div>
@@ -321,7 +311,7 @@
       <div class="tier-badge" id="tl-badge">-</div>
     </div>
   </div>
-
+ 
   <!-- STEP 5 -->
   <div id="step-5" style="display:none">
     <div class="section">
@@ -333,11 +323,11 @@
       <div class="field"><label>Request summary</label><div class="summary-box" id="summary">Complete the previous steps.</div></div>
     </div>
   </div>
-
+ 
 </div></div>
-
+ 
 <div id="success"></div>
-
+ 
 <div class="footer-bar"><div class="footer-inner">
   <div class="step-info" id="step-info">Step 1 of 5 · Who is filling in</div>
   <div style="display:flex;gap:10px;align-items:center;">
@@ -345,7 +335,7 @@
     <button class="btn btn-primary" id="btn-next" onclick="next()">Continue →</button>
   </div>
 </div></div>
-
+ 
 <script>
 /* ╔══════════════════════════════════════════════════════════════════════╗
    ║  EDIT HERE                                                           ║
@@ -353,33 +343,33 @@
    ║  deleting the quotes or the commas at the end of each line.          ║
    ╚══════════════════════════════════════════════════════════════════════╝ */
 const CONFIG = {
-
+ 
   // Apps Script address that saves the answers and sends the email.
   // If left as the placeholder, the form works but saves nothing.
   BACKEND: 'https://script.google.com/macros/s/AKfycbwRJDWimhVSOnSOjzqoe81wesiKLPJMmqYU8I8mWAxRX0Iqpe1apOE9CAhZADffv4MNqA/exec',
-
+ 
   // Large title at the top, on two lines.
   TITULO_1: 'Case',
   TITULO_2: 'request',
-
+ 
   // Tag next to the logo.
   ETIQUETA: 'cases',
-
+ 
   // Text under the title. Anything between <b> and </b> is bold.
   SUBTITULO: 'Filling in this form helps us ensure the right production within the campaign timeline. Please complete it with all the required information <b>within 10 days after the campaign ends</b>, or earlier if the case requires mandatory in-store filming or photography.<br><br>The more complete the brief, the better aligned the delivery.',
-
+ 
   // Who to contact if the submission fails.
   CONTATO: 'Internal Communications'
-
+ 
 };
 /* ═══════════ no need to edit anything below this line ═══════════ */
-
+ 
 const CRITERIOS = [
   {id:'marca',nome:'Brand',sub:'Strength of the advertiser and the retailer',
    lo:'Local or low-awareness brand',md:'Regional category leader',
-   hi:'Global icon brand at a flagship retailer'},
+   hi:'Global icon brand'},
   {id:'relevancia',nome:'Relevance',sub:'Category and market timing',
-   lo:'Niche category, no timing hook',md:'Relevant category, generic timing',
+   lo:'Niche category',md:'Relevant category, generic timing',
    hi:'Priority category tied to a key commercial moment'},
   {id:'impacto',nome:'Impact',sub:'Proven business results',
    lo:'No measured KPI available',md:'Solid result on a single KPI',
@@ -395,7 +385,7 @@ const CRITERIOS = [
    hi:'Store + onsite + offsite in one measured journey'}
 ];
 const scores = {};
-
+ 
 function renderScore(){
   document.getElementById('score-list').innerHTML = CRITERIOS.map(function(c){
     return '<div class="score-item" id="si-'+c.id+'">'+
@@ -434,8 +424,15 @@ function refreshTier(){
   ['a','b','c'].forEach(function(k){ document.getElementById('tref-'+k).classList.remove('on'); });
   if(r.k) document.getElementById('tref-'+r.k).classList.add('on');
 }
-
+ 
 function tc(el){ el.classList.toggle('selected'); up(); }
+function sr(el){
+  el.parentElement.querySelectorAll('.chip').forEach(function(c){c.classList.remove('selected');});
+  el.classList.add('selected');
+  const o=document.getElementById('regiao-outra');
+  if(el.dataset.val==='Other'){ o.style.display='block'; o.focus(); } else { o.style.display='none'; o.value=''; }
+  up();
+}
 function so(el){ el.parentElement.querySelectorAll('.prio-card').forEach(function(c){c.classList.remove('selected');});
   el.classList.add('selected'); up(); }
 function cc(el,id,max){ if(el.value.length>max) el.value=el.value.substring(0,max);
@@ -443,12 +440,14 @@ function cc(el,id,max){ if(el.value.length>max) el.value=el.value.substring(0,ma
 function v(id){ const e=document.getElementById(id); return e?e.value.trim():''; }
 function pick(g){ const e=document.querySelector('#'+g+' .prio-card.selected'); return e?e.dataset.val:''; }
 function chips(g){ return [].map.call(document.querySelectorAll('#'+g+' .chip.selected'),function(c){return c.dataset.val;}); }
-
+function regiao(){ const r=chips('regiao-group')[0]||''; return r==='Other'?v('regiao-outra'):r; }
+function banners(){ const b=chips('bandeira-group'); if(v('varejista-outro')) b.push(v('varejista-outro')); return b.join(', '); }
+ 
 const CAMPOS=['dono','email','comercial','anunciante','categoria','inicio','fim',
-              'desafio','mecanica'];
+              'desafio','mecanica','canais'];
 function up(){
   let f=CAMPOS.filter(function(id){return v(id);}).length;
-  f+=[chips('bandeira-group').length,chips('contato-group').length,chips('ambiente-group').length,
+  f+=[regiao(),banners(),chips('ambiente-group').length,
       pick('report-group'),pick('aprov-group'),pick('juridico-group')].filter(Boolean).length;
   f+=CRITERIOS.filter(function(c){return scores[c.id];}).length;
   document.getElementById('progress').style.width=Math.min(100,Math.round(f/(CAMPOS.length+6+6)*100))+'%';
@@ -457,27 +456,29 @@ function up(){
 function resumo(){
   const t=total(), r=tierOf(t,completo());
   document.getElementById('summary').innerHTML=
-    '<b>Case:</b> '+(v('anunciante')||'-')+' · '+(chips('bandeira-group').join(', ')||'-')+'<br>'+
+    '<b>Case:</b> '+(v('anunciante')||'-')+' · '+(banners()||'-')+'<br>'+
+    '<b>Region:</b> '+(regiao()||'-')+'<br>'+
     '<b>Category:</b> '+(v('categoria')||'-')+'<br>'+
     '<b>Period:</b> '+(v('inicio')||'-')+' to '+(v('fim')||'-')+'<br>'+
     '<b>Contacts:</b> '+(v('comercial')||'-')+(v('agencia')?' · '+v('agencia'):'')+'<br>'+
-    '<b>Touchpoints:</b> '+(chips('contato-group').join(', ')||'-')+'<br>'+
+    '<b>Environments:</b> '+(chips('ambiente-group').join(', ')||'-')+'<br>'+
     '<b>Insights report:</b> '+(pick('report-group')||'-')+'<br>'+
     '<b>Score:</b> '+t+'/30 &nbsp;→&nbsp; <b style="color:var(--accent)">'+r.nome+'</b>';
 }
-
+ 
 let step=1;
-const LABELS=['Who is filling in','Challenge and strategy','Report and approvals','Score','Wrap-up'];
+const LABELS=['Who is filling in','Challenge and channels','Report and approvals','Score','Wrap-up'];
 function falta(s){
   const f=[];
-  if(s===1){ ['dono','email','comercial','anunciante','categoria','inicio','fim'].forEach(function(i){if(!v(i))f.push(i);});
-             if(!chips('bandeira-group').length) f.push('bandeira-group'); }
+  if(s===1){ ['dono','email','comercial'].forEach(function(i){if(!v(i))f.push(i);});
+             if(!regiao()) f.push('regiao-group');
+             if(!banners()) f.push('bandeira-group');
+             ['anunciante','categoria','inicio','fim'].forEach(function(i){if(!v(i))f.push(i);}); }
   if(s===2){ ['desafio','mecanica'].forEach(function(i){if(!v(i))f.push(i);});
-             if(!chips('contato-group').length) f.push('contato-group');
-             if(!chips('ambiente-group').length) f.push('ambiente-group'); }
+             if(!chips('ambiente-group').length) f.push('ambiente-group');
+             if(!v('canais')) f.push('canais'); }
   if(s===3){ ['report-group','aprov-group','juridico-group'].forEach(function(g){if(!pick(g))f.push(g);}); }
   if(s===4){ CRITERIOS.forEach(function(c){ if(!scores[c.id]) f.push('si-'+c.id); }); }
-  if(s===5){ return f; }
   return f;
 }
 function next(){
@@ -518,17 +519,17 @@ function rodape(){
   b.textContent=step===5?'✓ Submit case':'Continue →';
   b.className='btn '+(step===5?'btn-success':'btn-primary');
 }
-
+ 
 async function enviar(){
   const b=document.getElementById('btn-next'), txt=b.textContent;
   b.textContent='Submitting...'; b.disabled=true; b.style.opacity='.7';
   const t=total(), r=tierOf(t,true);
   const dados={action:'novo_case',
-    varejista:chips('bandeira-group').join(', '),anunciante:v('anunciante'),categoria:v('categoria'),
-    mercado:'',inicio:v('inicio'),fim:v('fim'),
+    varejista:banners(),anunciante:v('anunciante'),categoria:v('categoria'),
+    mercado:regiao(),inicio:v('inicio'),fim:v('fim'),
     dono:v('dono'),email:v('email'),comercial:v('comercial'),agencia:v('agencia'),
     desafio:v('desafio'),mecanica:v('mecanica'),
-    contatos:chips('contato-group').join(', '),ambientes:chips('ambiente-group').join(', '),
+    ambientes:chips('ambiente-group').join(', '),canais:v('canais'),
     kpi:'',valor:'',benchmark:'',fonte:'',controle:'',quote:'',
     aprovacao:pick('aprov-group'),juridico:pick('juridico-group'),
     marca:scores.marca,relevancia:scores.relevancia,impacto:scores.impacto,
@@ -549,6 +550,7 @@ async function enviar(){
     const s=document.getElementById('success');
     s.innerHTML='<div class="ico">✅</div><h2>Case submitted</h2><p><b>'+dados.anunciante+' · '+dados.varejista+
       '</b><br>Score '+t+'/30 &nbsp;→&nbsp; <b>'+r.nome+'</b><br><br>'+
+      'A summary of your submission has been sent to <b>'+dados.email+'</b>.<br>'+
       'Marketing will review the score with you within 2 business days, and the tier will be confirmed the same day.<br><br>'+
       '<b style="color:var(--ink)">Thank you for completing the form. The Marketing team will be in touch shortly.</b></p>'+
       '<div style="margin-top:26px"><button class="btn btn-ghost" onclick="location.reload()">Submit another case</button></div>';
@@ -558,7 +560,7 @@ async function enviar(){
     b.textContent=txt; b.disabled=false; b.style.opacity='1';
   }
 }
-
+ 
 document.getElementById('hero-title').innerHTML=CONFIG.TITULO_1+'<br><em>'+CONFIG.TITULO_2+'</em>';
 document.getElementById('hero-sub').innerHTML=CONFIG.SUBTITULO;
 document.getElementById('logo-tag').textContent=CONFIG.ETIQUETA;
